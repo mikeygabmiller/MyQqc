@@ -543,7 +543,7 @@
       formData.append('message', msgBody);
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        body: 'message'
       }).then(function(res) { return res.json(); }).then(function() {
         goStep(5);
       }).catch(function() {
