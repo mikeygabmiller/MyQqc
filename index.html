@@ -545,7 +545,7 @@
         method: 'POST',
         body: 'message'
       }).then(function(res) { return res.json(); }).then(function() {
-        goStep(5);
+window.parent.postMessage("qqc_submitted", "*");        goStep(5);
       }).catch(function() {
         goStep(5);
       });
