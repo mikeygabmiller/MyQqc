@@ -529,8 +529,7 @@
       if (!name) { if (nameEl) { nameEl.style.borderColor = '#dc2626'; nameEl.focus(); } return; }
       if (!phone || phone.length < 7) { if (phoneEl) { phoneEl.style.borderColor = '#dc2626'; phoneEl.focus(); } return; }
       if (nameEl) nameEl.style.borderColor = 'rgba(220,38,38,0.25)';
-      if (phoneEl) phoneEl.style.borderColor = 'rgba(220,38,38,0
-      var btn = document.getElementById('qqSubmitBtn');
+      if (phoneEl) phoneEl.style.borderColor = 'rgba(220,38,38,0 var btn = document.getElementById('qqSubmitBtn');
       if (btn) { btn.disabled = true; btn.textContent = 'SENDING...'; }
       var cond = (qqS.condition && qqS.condition.label) ? qqS.condition.label : 'Pretty Clean';
       var msgBody = 'New Quote from QQC\n---\nName: ' + name + '\nPhone: ' + phone + '\nQuote: $' + qqTotal + '\nVehicle: ' + qqVehicle + '\nCondition: ' + cond + '\nServices: ' + qqItems.join(', ');
@@ -588,4 +587,3 @@
   setInterval(reportHeight, 500);
 })();
 </script>
-        
