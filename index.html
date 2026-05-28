@@ -529,7 +529,7 @@
       if (!name) { if (nameEl) { nameEl.style.borderColor = '#dc2626'; nameEl.focus(); } return; }
       if (!phone || phone.length < 7) { if (phoneEl) { phoneEl.style.borderColor = '#dc2626'; phoneEl.focus(); } return; }
       if (nameEl) nameEl.style.borderColor = 'rgba(220,38,38,0.25)';
-      if (phoneEl) phoneEl.style.borderColor = 'rgba(220,38,38,0.25)';
+      if (phoneEl) phoneEl.style.borderColor = 'rgba(220,38,38,0
       var btn = document.getElementById('qqSubmitBtn');
       if (btn) { btn.disabled = true; btn.textContent = 'SENDING...'; }
       var cond = (qqS.condition && qqS.condition.label) ? qqS.condition.label : 'Pretty Clean';
@@ -543,9 +543,10 @@
       formData.append('message', msgBody);
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: 'formData'
-      }).then(function('message') { return res.json(); }).then(function() {
-window.parent.postMessage("qqc_submitted", "*");        goStep(5);
+        body: formData
+      }).then(function(res) { return res.json(); }).then(function() {
+        window.parent.postMessage("qqc_submitted", "*");
+        goStep(5);
       }).catch(function() {
         goStep(5);
       });
@@ -587,3 +588,4 @@ window.parent.postMessage("qqc_submitted", "*");        goStep(5);
   setInterval(reportHeight, 500);
 })();
 </script>
+        
